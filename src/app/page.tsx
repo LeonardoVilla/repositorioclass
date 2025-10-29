@@ -3,6 +3,7 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, Github, BookOpen } from "lucide-react"; // BookOpen como ícone do Classroom
+import { FaWhatsapp } from "react-icons/fa"
 
 const softwares = [
   { name: "Composer", url: "https://getcomposer.org/download/" },
@@ -75,6 +76,15 @@ export default function SoftwaresPage() {
           >
             <Github size={36} />
           </a>
+          <a
+            href="https://wa.me/5565981391515"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-700 hover:text-green-600 transition-colors"
+          >
+            <FaWhatsapp size={36} />
+          </a>
+
         </div>
       </div>
 
