@@ -31,6 +31,7 @@ const tutoriais = [
   { name: "Runsql", url: "https://dbdiagram.io/" },
   { name: "W3schools", url: "https://www.w3schools.com/" },
   { name: "Reactnativepaper", url: "https://reactnativepaper.com/" },
+  { name: "Medium", url: "https://medium.com/@leonardovilla.tech/laravel-12-crud-com-livewire-988933f3773b" },
 ];
 
 export default function SoftwaresPage() {
