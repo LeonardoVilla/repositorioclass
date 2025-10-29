@@ -78,7 +78,7 @@ export default function SoftwaresPage() {
             alt="Ícone de Software"
             className="w-6 h-6"
           />
-          <span>Softwares para Desenvolvimento</span>
+          <h1>Softwares para Desenvolvimento</h1>
         </div>
 
 
