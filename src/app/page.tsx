@@ -29,7 +29,7 @@ const estudos = [
 export default function SoftwaresPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 py-12 px-6">
-      
+
       {/* PERFIL NO TOPO */}
       <div className="flex flex-col items-center mb-16">
         {/* FOTO REDONDA */}
@@ -41,7 +41,7 @@ export default function SoftwaresPage() {
 
         {/* NOME DO PROFESSOR LINKADO */}
         <a
-          href="https://br.linkedin.com/in/leonardotech" 
+          href="https://br.linkedin.com/in/leonardotech"
           target="_blank"
           rel="noopener noreferrer"
           className="text-2xl font-semibold text-slate-800 hover:text-blue-600 transition-colors mb-4"
@@ -72,9 +72,15 @@ export default function SoftwaresPage() {
 
       {/* SOFTWARES */}
       <div className="max-w-6xl mx-auto mb-16">
-        <h1 className="text-4xl font-bold text-center text-slate-800 mb-10">
-          🧰 Softwares para Desenvolvimento
-        </h1>
+        <div className="flex items-center gap-2">
+          <img
+            src="/icons/software.png"
+            alt="Ícone de Software"
+            className="w-6 h-6"
+          />
+          <span>Softwares para Desenvolvimento</span>
+        </div>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {softwares.map((s) => (
