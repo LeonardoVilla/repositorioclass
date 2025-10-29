@@ -20,10 +20,10 @@ const servicos = [
   { name: "MongoDB", url: "https://www.mongodb.com/" },
 ];
 
-const estudos = [
-  { name: "Supabase", url: "https://supabase.com/" },
-  { name: "Firebase", url: "https://www.firebase.google.com/docs/auth?hl=pt-br" },
-  { name: "MongoDB", url: "https://www.mongodb.com/" },
+const tutoriais = [
+  { name: "DBdiagram", url: "https://dbdiagram.io/d" },
+  { name: "Runsql", url: "https://dbdiagram.io/" },
+  { name: "W3schools", url: "https://www.w3schools.com/" },
 ];
 
 export default function SoftwaresPage() {
@@ -112,6 +112,35 @@ export default function SoftwaresPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {servicos.map((s) => (
+            <motion.a
+              key={s.name}
+              href={s.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="rounded-2xl border border-slate-200 bg-white shadow-md hover:shadow-xl transition-shadow p-5 flex items-center justify-between text-slate-700 font-semibold text-xl"
+            >
+              {s.name}
+              <ExternalLink size={18} className="text-slate-400" />
+            </motion.a>
+          ))}
+        </div>
+      </div>
+
+      {/* Tutoriais e Dicas */}
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center justify-center gap-3 mb-10 text-4xl font-bold text-slate-800">
+          <img
+            src="/icons/tutorial.png"
+            alt="Ícone de Software"
+            className="w-10 h-10"
+          />
+          <h1>Tutoriais</h1>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {tutoriais.map((s) => (
             <motion.a
               key={s.name}
               href={s.url}
