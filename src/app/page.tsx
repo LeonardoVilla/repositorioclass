@@ -72,15 +72,14 @@ export default function SoftwaresPage() {
 
       {/* SOFTWARES */}
       <div className="max-w-6xl mx-auto mb-16">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center justify-center gap-3 mb-10 text-4xl font-bold text-slate-800">
           <img
             src="/icons/software.png"
             alt="Ícone de Software"
-            className="w-6 h-6"
+            className="w-10 h-10"
           />
           <h1>Softwares para Desenvolvimento</h1>
         </div>
-
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {softwares.map((s) => (
@@ -102,9 +101,14 @@ export default function SoftwaresPage() {
 
       {/* SERVIÇOS */}
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-slate-800 mb-10">
-          🧰 Acesso aos Serviços
-        </h1>
+        <div className="flex items-center justify-center gap-3 mb-10 text-4xl font-bold text-slate-800">
+          <img
+            src="/icons/service.png"
+            alt="Ícone de Software"
+            className="w-10 h-10"
+          />
+          <h1>Acesso aos Serviços</h1>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {servicos.map((s) => (
