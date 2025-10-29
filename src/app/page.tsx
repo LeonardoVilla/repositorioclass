@@ -18,12 +18,18 @@ const servicos = [
   { name: "Supabase", url: "https://supabase.com/" },
   { name: "Firebase", url: "https://www.firebase.google.com/docs/auth?hl=pt-br" },
   { name: "MongoDB", url: "https://www.mongodb.com/" },
+  { name: "React Expo", url: "https://docs.expo.dev/" },
+  { name: "Laravel", url: "https://laravel.com/" },
+  { name: "Carousel ", url: "https://swiperjs.com/demos/" },
+  { name: "Bootstrap ", url: "https://getbootstrap.com/" },
+  { name: "Reactnativepaper", url: "https://reactnativepaper.com/" },
 ];
 
 const tutoriais = [
   { name: "DBdiagram", url: "https://dbdiagram.io/d" },
   { name: "Runsql", url: "https://dbdiagram.io/" },
   { name: "W3schools", url: "https://www.w3schools.com/" },
+  { name: "Reactnativepaper", url: "https://reactnativepaper.com/" },
 ];
 
 export default function SoftwaresPage() {
@@ -107,7 +113,7 @@ export default function SoftwaresPage() {
             alt="Ícone de Software"
             className="w-10 h-10"
           />
-          <h1>Acesso aos Serviços</h1>
+          <h1>Documentações e Serviços</h1>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
