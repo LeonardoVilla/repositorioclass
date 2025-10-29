@@ -100,7 +100,7 @@ export default function SoftwaresPage() {
       </div>
 
       {/* SERVIÇOS */}
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto mb-16">
         <div className="flex items-center justify-center gap-3 mb-10 text-4xl font-bold text-slate-800">
           <img
             src="/icons/service.png"
