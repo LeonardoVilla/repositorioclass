@@ -23,6 +23,7 @@ const servicos = [
   { name: "Carousel ", url: "https://swiperjs.com/demos/" },
   { name: "Bootstrap ", url: "https://getbootstrap.com/" },
   { name: "Reactnativepaper", url: "https://reactnativepaper.com/" },
+  { name: "Mapeador Json", url: "https://jsoncrack.com/editor" },
 ];
 
 const tutoriais = [
