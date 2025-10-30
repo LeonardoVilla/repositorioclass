@@ -3,7 +3,8 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, Github, BookOpen } from "lucide-react"; // BookOpen como ícone do Classroom
-import { FaWhatsapp } from "react-icons/fa"
+import { FaWhatsapp } from "react-icons/fa";
+import { CSSProperties } from "react";
 
 const softwares = [
   { name: "Composer", url: "https://getcomposer.org/download/" },
@@ -209,6 +210,18 @@ export default function SoftwaresPage() {
             </motion.a>
           ))}
         </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto mb-16 flex justify-center">
+        <ins className="adsbygoogle"
+          style={{ display: "block" } as CSSProperties}
+          data-ad-client="ca-pub-3767146802364121"
+          data-ad-slot="5482225729"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({ });
+        </script>
       </div>
 
     </main>
