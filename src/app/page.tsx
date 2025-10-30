@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github, BookOpen } from "lucide-react"; // BookOpen como ícone do Classroom
 import { FaWhatsapp } from "react-icons/fa";
 import { CSSProperties } from "react";
+import Script from "next/script";
+
 
 const softwares = [
   { name: "Composer", url: "https://getcomposer.org/download/" },
@@ -38,7 +40,7 @@ const tutoriaisbd = [
   { name: "DB Diagram", url: "https://dbdiagram.io/d" },
   { name: "Runsql", url: "https://dbdiagram.io/" },
   { name: "Hacker Rank SQL", url: "https://www.hackerrank.com/domains/sql/" },
-  { name: "LeetCode SQL", url: "hhttps://leetcode.com/problemset/database/" },
+  { name: "LeetCode SQL", url: "https://leetcode.com/problemset/database/" },
   { name: "SQLzoo", url: "https://sqlzoo.net/wiki/SQL_Tutorial" },
   { name: "Mode SQL", url: "https://mode.com/sql-tutorial" },
 ];
@@ -219,11 +221,26 @@ export default function SoftwaresPage() {
           data-ad-slot="5482225729"
           data-ad-format="auto"
           data-full-width-responsive="true"></ins>
-        <script>
+        <Script strategy="afterInteractive">
           (adsbygoogle = window.adsbygoogle || []).push({ });
-        </script>
+        </Script>
       </div>
 
+      {/* Script de consentimento do Google  */}
+      
+        <Script id="google-consent" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied'
+          });
+          gtag('js', new Date());
+          gtag('config', 'ca-pub-3767146802364121');
+        `}
+        </Script>
+     
     </main>
   );
 }
