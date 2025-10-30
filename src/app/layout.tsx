@@ -32,7 +32,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
 
         {/* RODAPÉ */}
-        <footer className="bg-slate-200 py-6 mt-10 text-center text-slate-700 text-sm">
+        <footer className="bg-slate py-6 mt-2 text-center text-slate-700 text-sm">
           <p className="mb-2">© {new Date().getFullYear()} Professor Leonardo Villa</p>
           <div className="space-x-4">
             <Link href="/sobre" className="hover:text-blue-600">Sobre / Contato</Link>
