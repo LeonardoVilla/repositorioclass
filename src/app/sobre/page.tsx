@@ -15,7 +15,7 @@ export default function SobrePage() {
 
       <ul className="list-disc pl-6 space-y-2">
         <li>
-          <a href="mailto:seuemail@dominio.com" className="text-blue-600 hover:underline">
+          <a href="leonardovilla.tech@gmail.com" className="text-blue-600 hover:underline">
             leonardovilla.tech@gmail.com
           </a>
         </li>
