@@ -215,32 +215,40 @@ export default function SoftwaresPage() {
       </div>
 
       <div className="max-w-6xl mx-auto mb-16 flex justify-center">
-        <ins className="adsbygoogle"
-          style={{ display: "block" } as CSSProperties}
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" } as React.CSSProperties}
           data-ad-client="ca-pub-3767146802364121"
           data-ad-slot="5482225729"
           data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-        <Script strategy="afterInteractive">
-          (adsbygoogle = window.adsbygoogle || []).push({ });
-        </Script>
+          data-full-width-responsive="true"
+        ></ins>
+
+        {/* Aqui você precisa garantir que o código do adsbygoogle esteja sendo empurrado corretamente */}
+        <Script
+          strategy="afterInteractive"
+          onLoad={() => {
+            // Chama o push() corretamente após a biblioteca ter sido carregada
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+          }}
+        />
       </div>
 
-      {/* Script de consentimento do Google  */}
-      
-        <Script id="google-consent" strategy="afterInteractive">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('consent', 'default', {
-            'ad_storage': 'denied',
-            'analytics_storage': 'denied'
-          });
-          gtag('js', new Date());
-          gtag('config', 'ca-pub-3767146802364121');
-        `}
-        </Script>
-     
+      {/* Script de consentimento */}
+      <Script id="google-consent" strategy="afterInteractive">
+        {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', 'ca-pub-3767146802364121');
+  `}
+      </Script>
+
+
     </main>
   );
 }
