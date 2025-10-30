@@ -20,7 +20,7 @@ const SheetPage = () => {
         const res = await fetch('/api/getSheetData', {
           method: 'GET',
           headers: {
-            'Referer': 'https://leonardovilla.com.br',  // Definindo o referer explicitamente
+            'Referer': 'https://leonardovilla.com.br/*',  // Definindo o referer explicitamente
           },
         });
         if (!res.ok) {
