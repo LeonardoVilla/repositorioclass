@@ -1,4 +1,4 @@
-'use client'; 
+'use client';
 import { useEffect, useState } from 'react';
 
 interface GoogleSheetsResponse {
@@ -16,7 +16,13 @@ const SheetPage = () => {
     const fetchSheetData = async () => {
       try {
         // Fazendo a requisição para a API
-        const res = await fetch('/api/getSheetData');
+        // const res = await fetch('/api/getSheetData');
+        const res = await fetch('/api/getSheetData', {
+          method: 'GET',
+          headers: {
+            'Referer': 'https://leonardovilla.com.br',  // Definindo o referer explicitamente
+          },
+        });
         if (!res.ok) {
           throw new Error('Erro ao buscar os dados da planilha');
         }
