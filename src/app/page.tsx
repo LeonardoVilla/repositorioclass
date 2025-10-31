@@ -28,6 +28,7 @@ const servicos = [
   { name: "Bootstrap ", url: "https://getbootstrap.com/" },
   { name: "Reactnativepaper", url: "https://reactnativepaper.com/" },
   { name: "Mapeador Json", url: "https://jsoncrack.com/editor" },
+  { name: "Postman", url: "https://identity.getpostman.com/" },
 ];
 
 const tutoriaisdev = [
