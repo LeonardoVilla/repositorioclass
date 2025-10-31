@@ -7,45 +7,9 @@ import { FaWhatsapp } from "react-icons/fa";
 import { CSSProperties } from "react";
 import Script from "next/script";
 
-
-const softwares = [
-  { name: "Composer", url: "https://getcomposer.org/download/" },
-  { name: "Git", url: "https://git-scm.com/install/windows" },
-  { name: "XAMPP", url: "https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/" },
-  { name: "PHP", url: "https://windows.php.net/downloads/releases/archives/" },
-  { name: "Node.js", url: "https://nodejs.org/en/download" },
-  { name: "MariaDB", url: "https://mariadb.org/" },
-  { name: "MySQL", url: "https://www.oracle.com/mysql/technologies/mysql-enterprise-edition-downloads.html" },
-];
-
-const servicos = [
-  { name: "Supabase", url: "https://supabase.com/" },
-  { name: "Firebase", url: "https://www.firebase.google.com/docs/auth?hl=pt-br" },
-  { name: "MongoDB", url: "https://www.mongodb.com/" },
-  { name: "React Expo", url: "https://docs.expo.dev/" },
-  { name: "Laravel", url: "https://laravel.com/" },
-  { name: "Carousel ", url: "https://swiperjs.com/demos/" },
-  { name: "Bootstrap ", url: "https://getbootstrap.com/" },
-  { name: "Reactnativepaper", url: "https://reactnativepaper.com/" },
-  { name: "Mapeador Json", url: "https://jsoncrack.com/editor" },
-  { name: "Postman", url: "https://identity.getpostman.com/" },
-];
-
-const tutoriaisdev = [
-  { name: "W3schools", url: "https://www.w3schools.com/" },
-  { name: "Reactnative", url: "https://reactnativepaper.com/" },
-  { name: "Medium Tutoriais", url: "https://medium.com/@leonardovilla.tech/" },
-  { name: "Medium Laravel", url: "https://medium.com/@leonardovilla.tech/laravel-12-crud-com-livewire-988933f3773b" },
-];
-
-const tutoriaisbd = [
-  { name: "DB Diagram", url: "https://dbdiagram.io/d" },
-  { name: "Runsql", url: "https://dbdiagram.io/" },
-  { name: "Hacker Rank SQL", url: "https://www.hackerrank.com/domains/sql/" },
-  { name: "LeetCode SQL", url: "https://leetcode.com/problemset/database/" },
-  { name: "SQLzoo", url: "https://sqlzoo.net/wiki/SQL_Tutorial" },
-  { name: "Mode SQL", url: "https://mode.com/sql-tutorial" },
-];
+import { softwares, servicos, tutoriaisdev, tutoriaisbd } from './utils/data';
+import LinkWithIcon from './utils/components/LinkWithIcon';
+import { socialLinks } from './utils/links'; // Importe seus links
 
 export default function SoftwaresPage() {
   return (
@@ -72,31 +36,14 @@ export default function SoftwaresPage() {
 
         {/* ICONE CLASSROOM E GITHUB */}
         <div className="flex space-x-6">
-          <a
-            href="https://classroom.google.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-slate-700 hover:text-blue-600 transition-colors"
-          >
-            <BookOpen size={36} />
-          </a>
-          <a
-            href="https://github.com/LeonardoVilla"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-slate-700 hover:text-gray-900 transition-colors"
-          >
-            <Github size={36} />
-          </a>
-          <a
-            href="https://wa.me/5565981391515"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-slate-700 hover:text-green-600 transition-colors"
-          >
-            <FaWhatsapp size={36} />
-          </a>
-
+          {socialLinks.map(link => (
+            <LinkWithIcon
+              key={link.name}
+              href={link.url}
+              icon={<link.icon size={36} />}
+              label={''}
+            />
+          ))}
         </div>
       </div>
 
