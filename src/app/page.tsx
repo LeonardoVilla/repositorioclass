@@ -34,6 +34,7 @@ const servicos = [
 const tutoriaisdev = [
   { name: "W3schools", url: "https://www.w3schools.com/" },
   { name: "Reactnative", url: "https://reactnativepaper.com/" },
+  { name: "Medium Tutoriais", url: "https://medium.com/@leonardovilla.tech/" },
   { name: "Medium Laravel", url: "https://medium.com/@leonardovilla.tech/laravel-12-crud-com-livewire-988933f3773b" },
 ];
 
