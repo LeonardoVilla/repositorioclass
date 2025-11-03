@@ -3,7 +3,7 @@
 export default function PoliticaPrivacidadePage() {
   return (
     <>
-      <main className="max-w-4xl mx-auto py-16 px-6 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">
+      <main className="max-w-4xl mx-auto py-16 px-6 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300 mt-20">
         <h1 className="text-4xl font-bold mb-6">Política de Privacidade</h1>
 
         <p className="mb-4">
