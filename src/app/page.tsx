@@ -8,9 +8,9 @@ import { CSSProperties } from "react";
 import Script from "next/script";
 
 import { softwares, servicos, tutoriaisdev, tutoriaisbd } from './utils/data';
-import LinkWithIcon from './utils/components/LinkWithIcon';
+import LinkWithIcon from './components/ui/LinkWithIcon';
 import { socialLinks } from './utils/links'; // Importe seus links
-import Navbar from "./components/navbar";
+import Navbar from "./components/layout/navbar";
 
 export default function SoftwaresPage() {
   return (
