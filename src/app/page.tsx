@@ -11,6 +11,12 @@ import { softwares, servicos, tutoriaisdev, tutoriaisbd } from './utils/data';
 import LinkWithIcon from './utils/components/LinkWithIcon';
 import { socialLinks } from './utils/links'; // Importe seus links
 
+export const metadata = {
+  title: "Softwares e Tutoriais - Leonardo Villa",
+  description: "Lista de softwares, documentações e tutoriais usados nas aulas de desenvolvimento e banco de dados.",
+};
+
+
 export default function SoftwaresPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 py-12 px-6">
@@ -48,23 +54,18 @@ export default function SoftwaresPage() {
       </div>
 
       {/* SOFTWARES */}
-      <div className="max-w-6xl mx-auto mb-16">
-        <div className="flex items-center justify-center gap-3 mb-10 text-4xl font-bold text-slate-800">
-          <img
-            src="/icons/software.png"
-            alt="Ícone de Software"
-            className="w-10 h-10"
-          />
-          <h1>Softwares para Desenvolvimento</h1>
+      <section className="max-w-6xl mx-auto mb-16">
+        <div className="flex flex-col items-center mb-8">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">Softwares para Desenvolvimento</h2>
+          <p className="text-slate-600 text-center max-w-3xl">
+            Esta lista reúne os principais softwares utilizados nas aulas de programação e banco de dados.
+            São ferramentas gratuitas ou acessíveis, ideais para quem está começando na área de tecnologia.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
           {softwares.map((s) => (
-            <motion.a
-              key={s.name}
-              href={s.url}
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}
               transition={{ type: "spring", stiffness: 300 }}
               className="rounded-2xl border border-slate-200 bg-white shadow-md hover:shadow-xl transition-shadow p-5 flex items-center justify-between text-slate-700 font-semibold text-xl"
@@ -74,20 +75,22 @@ export default function SoftwaresPage() {
             </motion.a>
           ))}
         </div>
-      </div>
+      </section>
 
       {/* SERVIÇOS */}
-      <div className="max-w-6xl mx-auto mb-16">
-        <div className="flex items-center justify-center gap-3 mb-10 text-4xl font-bold text-slate-800">
-          <img
-            src="/icons/service.png"
-            alt="Ícone de Software"
-            className="w-10 h-10"
-          />
-          <h1>Documentações e Serviços</h1>
+      <section className="max-w-6xl mx-auto mb-16">
+        <div className="flex flex-col items-center mb-8">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">Documentações e Serviços</h2>
+          <p className="text-slate-600 text-center max-w-3xl">
+            Esta seção reúne as principais documentações oficiais, guias e plataformas
+            de suporte utilizadas no desenvolvimento de sistemas e aplicações web.
+            Aqui você encontra recursos técnicos, referências de API, ambientes de hospedagem
+            e ferramentas de produtividade que facilitam o aprendizado e o trabalho diário
+            com tecnologia.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
           {servicos.map((s) => (
             <motion.a
               key={s.name}
@@ -103,20 +106,21 @@ export default function SoftwaresPage() {
             </motion.a>
           ))}
         </div>
-      </div>
+      </section>
 
-      {/* Tutoriais e Dicas  DEV*/}
-      <div className="max-w-6xl mx-auto mb-16">
-        <div className="flex items-center justify-center gap-3 mb-10 text-4xl font-bold text-slate-800">
-          <img
-            src="/icons/dev.png"
-            alt="Ícone de Software"
-            className="w-10 h-10"
-          />
-          <h1>Tutoriais DEV</h1>
+
+      <section className="max-w-6xl mx-auto mb-16">
+        <div className="flex flex-col items-center mb-8">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">Tutoriais e Dicas DEV</h2>
+          <p className="text-slate-600 text-center max-w-3xl">
+            Nesta seção estão reunidos tutoriais e dicas voltadas ao desenvolvimento de software,
+            abordando desde fundamentos de programação até práticas avançadas de integração entre
+            tecnologias. O conteúdo é voltado para estudantes e profissionais que desejam aprender
+            sobre frameworks modernos, ferramentas de front-end e back-end, e boas práticas de código.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
           {tutoriaisdev.map((s) => (
             <motion.a
               key={s.name}
@@ -132,20 +136,22 @@ export default function SoftwaresPage() {
             </motion.a>
           ))}
         </div>
-      </div>
+      </section>
+
 
       {/* Tutoriais e Dicas  SQL/BD*/}
-      <div className="max-w-6xl mx-auto mb-16">
-        <div className="flex items-center justify-center gap-3 mb-10 text-4xl font-bold text-slate-800">
-          <img
-            src="/icons/sql.png"
-            alt="Ícone de Software"
-            className="w-10 h-10"
-          />
-          <h1>Tutoriais SQL</h1>
+      <section className="max-w-6xl mx-auto mb-16">
+        <div className="flex flex-col items-center mb-8">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">Tutoriais SQL e Banco de Dados</h2>
+          <p className="text-slate-600 text-center max-w-3xl">
+            Explore tutoriais sobre SQL e gerenciamento de bancos de dados, com conteúdos que abordam
+            desde consultas básicas até modelagem relacional e integração com aplicações. Ideal para
+            estudantes e desenvolvedores que desejam dominar a linguagem SQL, aprender sobre
+            normalização e entender o funcionamento dos principais SGBDs do mercado.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
           {tutoriaisbd.map((s) => (
             <motion.a
               key={s.name}
@@ -161,7 +167,8 @@ export default function SoftwaresPage() {
             </motion.a>
           ))}
         </div>
-      </div>
+      </section>
+
 
       <div className="max-w-6xl mx-auto mb-16 flex justify-center">
         <ins
