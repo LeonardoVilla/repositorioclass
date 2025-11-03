@@ -1,0 +1,3 @@
+# Arquivo ads.txt do site Professor Leonardo Villa
+# Autoriza o Google AdSense a vender anúncios neste site
+google.com, pub-3767146802364121, DIRECT, f08c47fec0942fa0
