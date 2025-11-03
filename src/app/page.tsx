@@ -16,7 +16,7 @@ export default function SoftwaresPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 py-12 px-6 mt-3">
+      <main className="min-h-screen py-12 px-6 mt-1">
 
         {/* PERFIL NO TOPO */}
         <div className="flex flex-col items-center mb-16">
@@ -166,26 +166,6 @@ export default function SoftwaresPage() {
           </div>
         </section>
 
-
-        <div className="max-w-6xl mx-auto mb-16 flex justify-center">
-          <ins
-            className="adsbygoogle"
-            style={{ display: "block" } as React.CSSProperties}
-            data-ad-client="ca-pub-3767146802364121"
-            data-ad-slot="5482225729"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-
-          {/* Aqui você precisa garantir que o código do adsbygoogle esteja sendo empurrado corretamente */}
-          <Script
-            strategy="afterInteractive"
-            onLoad={() => {
-              // Chama o push() corretamente após a biblioteca ter sido carregada
-              (window.adsbygoogle = window.adsbygoogle || []).push({});
-            }}
-          />
-        </div>
 
         {/* Script de consentimento */}
         <Script id="google-consent" strategy="afterInteractive">

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 dark:bg-slate-900 py-6 mt-2 text-center text-gray-700 dark:text-slate-300 text-sm transition-colors duration-300">
+    <footer className="py-6 mt-2 text-center text-gray-700 from-slate-100 to-slate-100 text-sm transition-colors duration-300">
       <p className="mb-2">
         © {new Date().getFullYear()} Professor Leonardo Villa. Todos os direitos reservados.
       </p>

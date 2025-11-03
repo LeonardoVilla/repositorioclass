@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/layout/navbar";
 import Footer from "./components/layout/footer";
+import AdBanner from "./components/ui/AdBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +37,10 @@ export default function RootLayout({
         <Navbar />
 
         {/* Conteúdo principal */}
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow bg-gradient-to-b from-slate-50 to-slate-50">{children}</main>
+
+        {/* Banner Google */}
+        <AdBanner />
 
         {/* RODAPÉ */}
         <Footer />
