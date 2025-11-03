@@ -11,12 +11,6 @@ import { softwares, servicos, tutoriaisdev, tutoriaisbd } from './utils/data';
 import LinkWithIcon from './utils/components/LinkWithIcon';
 import { socialLinks } from './utils/links'; // Importe seus links
 
-export const metadata = {
-  title: "Softwares e Tutoriais - Leonardo Villa",
-  description: "Lista de softwares, documentações e tutoriais usados nas aulas de desenvolvimento e banco de dados.",
-};
-
-
 export default function SoftwaresPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 py-12 px-6">
