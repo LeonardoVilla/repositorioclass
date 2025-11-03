@@ -1,10 +1,9 @@
-import Navbar from "../components/layout/navbar";
+// app/politica-de-privacidade/page.tsx
 
 export default function PoliticaPrivacidadePage() {
   return (
     <>
-      <Navbar />
-      <main className="max-w-4xl mx-auto py-16 px-6 text-slate-800">
+      <main className="max-w-4xl mx-auto py-16 px-6 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">
         <h1 className="text-4xl font-bold mb-6">Política de Privacidade</h1>
 
         <p className="mb-4">
@@ -22,8 +21,15 @@ export default function PoliticaPrivacidadePage() {
         <p className="mb-4">
           Este site pode exibir anúncios do <strong>Google AdSense</strong>, que utilizam cookies
           para exibir anúncios personalizados com base nas visitas anteriores do usuário a este e a outros sites.
-          O usuário pode optar por desativar a personalização de anúncios acessando:
-          <a href="https://adssettings.google.com" target="_blank" className="text-blue-600 hover:underline"> adssettings.google.com</a>.
+          O usuário pode optar por desativar a personalização de anúncios acessando:{" "}
+          <a
+            href="https://adssettings.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 dark:text-blue-400 hover:underline transition-colors"
+          >
+            adssettings.google.com
+          </a>.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">3. Links externos</h2>
@@ -40,11 +46,16 @@ export default function PoliticaPrivacidadePage() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">5. Contato</h2>
         <p>
-          Para dúvidas sobre esta Política de Privacidade, entre em contato pelo e-mail:
-          <a href="leonardovilla.tech@gmail.com" className="text-blue-600 hover:underline"> leonardovilla.tech@gmail.com</a>.
+          Para dúvidas sobre esta Política de Privacidade, entre em contato pelo e-mail:{" "}
+          <a
+            href="mailto:leonardovilla.tech@gmail.com"
+            className="text-blue-600 dark:text-blue-400 hover:underline transition-colors"
+          >
+            leonardovilla.tech@gmail.com
+          </a>.
         </p>
 
-        <p className="mt-10 text-sm text-slate-500">
+        <p className="mt-10 text-sm text-slate-500 dark:text-slate-400">
           Última atualização: {new Date().toLocaleDateString("pt-BR")}
         </p>
       </main>
