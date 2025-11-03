@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Menu } from "lucide-react";
+import { Menu, Home } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,18 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-transparent">
-      <div className="max-w-6xl mx-auto px-6 flex justify-end items-center h-16">
+      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center h-16">
+
+        {/* Ícone Home à Esquerda */}
+        <div className="flex items-center mr-auto"> 
+          <a
+            href="/"
+            className="p-2 text-slate-600 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+          >
+            <Home size={28} />
+          </a>
+        </div>
+
         {/* Hamburger menu */}
         <div ref={menuRef} className="relative">
           <button
