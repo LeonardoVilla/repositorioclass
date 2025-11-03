@@ -54,13 +54,12 @@ export default function SoftwaresPage() {
           <div className="flex flex-col items-center mb-8">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">Softwares para Desenvolvimento</h2>
             <p className="text-slate-600 text-center max-w-3xl">
-              Esta lista reúne os principais softwares utilizados nas aulas de programação e banco de dados.
-              São ferramentas gratuitas ou acessíveis, ideais para quem está começando na área de tecnologia.
+              { softwares.description }
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
-            {softwares.map((s) => (
+            {softwares.list.map((s) => (
               <motion.a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer"
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 300 }}
@@ -78,16 +77,12 @@ export default function SoftwaresPage() {
           <div className="flex flex-col items-center mb-8">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">Documentações e Serviços</h2>
             <p className="text-slate-600 text-center max-w-3xl">
-              Esta seção reúne as principais documentações oficiais, guias e plataformas
-              de suporte utilizadas no desenvolvimento de sistemas e aplicações web.
-              Aqui você encontra recursos técnicos, referências de API, ambientes de hospedagem
-              e ferramentas de produtividade que facilitam o aprendizado e o trabalho diário
-              com tecnologia.
+              { servicos.description}
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
-            {servicos.map((s) => (
+            {servicos.list.map((s) => (
               <motion.a
                 key={s.name}
                 href={s.url}
@@ -109,15 +104,12 @@ export default function SoftwaresPage() {
           <div className="flex flex-col items-center mb-8">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">Tutoriais e Dicas DEV</h2>
             <p className="text-slate-600 text-center max-w-3xl">
-              Nesta seção estão reunidos tutoriais e dicas voltadas ao desenvolvimento de software,
-              abordando desde fundamentos de programação até práticas avançadas de integração entre
-              tecnologias. O conteúdo é voltado para estudantes e profissionais que desejam aprender
-              sobre frameworks modernos, ferramentas de front-end e back-end, e boas práticas de código.
+              { tutoriaisdev.description}
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
-            {tutoriaisdev.map((s) => (
+            {tutoriaisdev.list.map((s) => (
               <motion.a
                 key={s.name}
                 href={s.url}
@@ -140,15 +132,12 @@ export default function SoftwaresPage() {
           <div className="flex flex-col items-center mb-8">
             <h2 className="text-4xl font-bold text-slate-800 mb-4">Tutoriais SQL e Banco de Dados</h2>
             <p className="text-slate-600 text-center max-w-3xl">
-              Explore tutoriais sobre SQL e gerenciamento de bancos de dados, com conteúdos que abordam
-              desde consultas básicas até modelagem relacional e integração com aplicações. Ideal para
-              estudantes e desenvolvedores que desejam dominar a linguagem SQL, aprender sobre
-              normalização e entender o funcionamento dos principais SGBDs do mercado.
+              { tutoriaisbd.description}
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
-            {tutoriaisbd.map((s) => (
+            {tutoriaisbd.list.map((s) => (
               <motion.a
                 key={s.name}
                 href={s.url}
