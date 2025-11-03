@@ -5,7 +5,7 @@ import Script from "next/script";
 
 const AdBanner = () => {
     return (
-        <div className="bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 py-12 px-6">
+        <div className="bg-gradient-to-b from-slate-50 to-slate-100 py-12 px-6">
             <ins
                 className="adsbygoogle"
                 style={{ display: "block" } as React.CSSProperties}
