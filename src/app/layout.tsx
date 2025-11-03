@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
+import Navbar from "./components/layout/navbar";
+import Footer from "./components/layout/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,17 +32,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
+        {/* Menu de Navegação principal */}
+        <Navbar />
+
         {/* Conteúdo principal */}
         <main className="flex-grow">{children}</main>
 
         {/* RODAPÉ */}
-        <footer className="bg-slate py-6 mt-2 text-center text-slate-700 text-sm">
-          <p className="mb-2">© {new Date().getFullYear()} Professor Leonardo Villa</p>
-          <div className="space-x-4">
-            <Link href="/sobre" className="hover:text-blue-600">Sobre / Contato</Link>
-            <Link href="/politica-de-privacidade" className="hover:text-blue-600">Política de Privacidade</Link>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
