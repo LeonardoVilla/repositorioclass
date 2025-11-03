@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/layout/navbar";
 import Footer from "./components/layout/footer";
 import AdBanner from "./components/ui/AdBanner";
+import GoogleConsent from "./components/scripts/GoogleConsent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,8 @@ export default function RootLayout({
 
         {/* RODAPÉ */}
         <Footer />
+
+        <GoogleConsent /> {/* Aqui fica global */}
       </body>
     </html>
   );

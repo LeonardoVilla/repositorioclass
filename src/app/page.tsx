@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github, BookOpen } from "lucide-react"; // BookOpen como ícone do Classroom
 import { FaWhatsapp } from "react-icons/fa";
 import { CSSProperties } from "react";
-import Script from "next/script";
 
 import { softwares, servicos, tutoriaisdev, tutoriaisbd } from './utils/data';
 import LinkWithIcon from './components/ui/LinkWithIcon';
@@ -165,22 +164,6 @@ export default function SoftwaresPage() {
             ))}
           </div>
         </section>
-
-
-        {/* Script de consentimento */}
-        <Script id="google-consent" strategy="afterInteractive">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('consent', 'default', {
-            'ad_storage': 'denied',
-            'analytics_storage': 'denied'
-          });
-          gtag('js', new Date());
-          gtag('config', 'ca-pub-3767146802364121');
-        `}
-        </Script>
-
 
       </main>
     </>
