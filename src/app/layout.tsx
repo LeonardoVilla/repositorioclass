@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/layout/navbar";
-import Footer from "./components/layout/footer";
-import AdBanner from "./components/ui/AdBanner";
-import GoogleConsent from "./components/scripts/GoogleConsent";
+import Navbar from "@/app/components/layout/Navbar"
+import Footer from "@/app/components/layout/Footer";
+import AdBanner from "@/app/components/adsense/GoogleAdBanner";
+import GoogleAdSenseMeta from "@/app/components/adsense/GoogleAdSenseMeta";
+import GoogleConsent from "@/app/components/scripts/adsense/GoogleConsent";
+import GoogleAdSenseScript from "@/app/components/scripts/adsense/GoogleAdSenseScript";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,8 +32,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <meta name="google-adsense-account" content="ca-pub-3767146802364121"></meta>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3767146802364121" crossOrigin="anonymous"></script>
+        {/* Meta tag do google ads */}
+        <GoogleAdSenseMeta />
+        {/* script do hed - google ads */}
+        <GoogleAdSenseScript />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
