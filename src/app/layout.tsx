@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // import Navbar from "@/app/components/layout/Navbar"
-import Navbar from "../../src/app/components/layout/Navbar";
-import Footer from "../../src/app/components/layout/Footer";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 // import Footer from "@/app/components/layout/Footer";
 import AdBanner from "@/app/components/adsense/GoogleAdBanner";
 import GoogleAdSenseMeta from "@/app/components/adsense/GoogleAdSenseMeta";
