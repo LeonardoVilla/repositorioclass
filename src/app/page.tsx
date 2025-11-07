@@ -24,11 +24,16 @@ export default function SoftwaresPage() {
   });
 
   useEffect(() => {
-    // Função para buscar dados do servidor
     const fetchData = async () => {
       try {
-        // const res = await fetch('http://localhost:3000/api/dados', { cache: 'no-store' });
-        const res = await fetch('https://leonardovilla.com.br//api/dados', { cache: 'no-store' });
+        // Define a URL base dependendo do ambiente
+        const baseUrl =
+          process.env.NODE_ENV === 'development'
+            ? 'http://localhost:3000'
+            : process.env.NEXT_PUBLIC_BASE_URL;
+
+        const res = await fetch(`${baseUrl}/api/dados`, { cache: 'no-store' });
+
         if (res.ok) {
           const data = await res.json();
           setDados(data);
@@ -40,8 +45,9 @@ export default function SoftwaresPage() {
       }
     };
 
-    fetchData(); // Chama a função para buscar os dados
-  }, []); // A lista de dependências está vazia para que só rode uma vez ao carregar
+    fetchData();
+  }, []);
+  // A lista de dependências está vazia para que só rode uma vez ao carregar
 
   return (
     <main className="min-h-screen py-12 px-6 mt-1">
