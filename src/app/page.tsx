@@ -27,7 +27,8 @@ export default function SoftwaresPage() {
     // Função para buscar dados do servidor
     const fetchData = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/dados', { cache: 'no-store' });
+        // const res = await fetch('http://localhost:3000/api/dados', { cache: 'no-store' });
+        const res = await fetch('https://leonardovilla.com.br//api/dados', { cache: 'no-store' });
         if (res.ok) {
           const data = await res.json();
           setDados(data);
@@ -73,9 +74,9 @@ export default function SoftwaresPage() {
 
       {/* SEÇÕES DINÂMICAS */}
       {[{ id: 'softwares', title: 'Softwares para Desenvolvimento', data: dados.softwares },
-        { id: 'servicos', title: 'Documentações e Serviços', data: dados.servicos },
-        { id: 'tutoriaisdev', title: 'Tutoriais e Dicas DEV', data: dados.tutoriaisDev },
-        { id: 'tutoriaisbd', title: 'Tutoriais SQL e Banco de Dados', data: dados.tutoriaisBD },
+      { id: 'servicos', title: 'Documentações e Serviços', data: dados.servicos },
+      { id: 'tutoriaisdev', title: 'Tutoriais e Dicas DEV', data: dados.tutoriaisDev },
+      { id: 'tutoriaisbd', title: 'Tutoriais SQL e Banco de Dados', data: dados.tutoriaisBD },
       ].map(section => (
         section.data.map((sec, idx) => (
           <section key={sec.description + idx} id={section.id} className="max-w-6xl mx-auto mb-16">
@@ -88,7 +89,7 @@ export default function SoftwaresPage() {
         ))
       ))}
 
-     {/* Estude Comigo */}
+      {/* Estude Comigo */}
       <section id="estude-comigo" className="max-w-6xl mx-auto mb-16">
         <div className="flex flex-col items-center mb-8">
           <h2 className="text-4xl font-bold text-slate-800 mb-4">Estude Comigo</h2>
@@ -99,7 +100,7 @@ export default function SoftwaresPage() {
 
         {/* Grid de links para Laravel, Next.js e Expo */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
-          {[ 
+          {[
             { name: "Laravel", href: "/aulas/laravel", icon: "/icons/laravel.svg" },
             { name: "Next.js", href: "/aulas/next", icon: "/icons/nextjs.svg" },
             { name: "Expo", href: "/aulas/expo", icon: "/icons/expo.svg" },
