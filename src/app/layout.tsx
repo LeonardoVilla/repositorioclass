@@ -49,7 +49,7 @@ export default function RootLayout({
         {/* Banner Google */}
         <AdBanner />
 
-        {/* RODAPÉ */}
+        {/* RODAPÉ        */}
         <Footer />
 
         <GoogleConsent /> {/* Aqui fica global */}
