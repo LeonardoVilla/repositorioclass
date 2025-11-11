@@ -12,13 +12,17 @@ export async function GET() {
     const softwares = await db.collection("softwares").find({}).toArray();
     const tutoriaisBD = await db.collection("tutoriaisbd").find({}).toArray();
     const tutoriaisDev = await db.collection("tutoriaisdev").find({}).toArray();
+    const tutorialgit = await db.collection("tutorialgit").find({}).toArray();
+    const tutoriallaravel = await db.collection("tutoriallaravel").find({}).toArray();
 
     // Retornando tudo junto
     return NextResponse.json({
       servicos,
       softwares,
       tutoriaisBD,
-      tutoriaisDev
+      tutoriaisDev,
+      tutorialgit,
+      tutoriallaravel,
     });
   } catch (error) {
     console.error("Erro ao buscar dados:", error);
