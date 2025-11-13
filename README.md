@@ -19,25 +19,53 @@ O objetivo é centralizar e publicar conteúdos didáticos para meus alunos, com
 ## 📂 Estrutura de Diretórios
 
 ```plaintext
-src
- ┣ app
- ┃ ┣ api/               → Rotas de API (dados, sheets, testes)
- ┃ ┣ aulas/             → Páginas de aulas por tema (Expo, Laravel, Next)
- ┃ ┣ components/        → Componentes reutilizáveis e layouts
- ┃ ┃ ┣ adsense/         → Componentes de integração do Google AdSense
- ┃ ┃ ┣ layout/          → Navbar, Footer e estrutura base
- ┃ ┃ ┣ scripts/adsense/ → Scripts de consentimento e carregamento dinâmico
- ┃ ┃ ┣ softwares/       → Grades e recursos
- ┃ ┃ ┗ ui/              → Blocos de interface (links, tech icons, etc.)
- ┃ ┣ politica-de-privacidade/
- ┃ ┣ sheets/
- ┃ ┣ sobre/
- ┃ ┣ tutoriais/         → Tutoriais de Git, Laravel, Next e Supabase
- ┃ ┣ utils/             → Funções utilitárias e listas de dados/links
- ┃ ┣ layout.tsx         → Layout base da aplicação
- ┃ ┗ page.tsx           → Página inicial
- ┗ lib/
-   ┗ mongodb.ts         → Conexão com o banco de dados MongoDB
+my-app/
+ ┣ ads.txt                 → Arquivo de verificação do Google AdSense (obrigatório para monetização)
+ ┣ public/
+ ┃ ┣ icons/
+ ┃ ┃ ┣ code.png
+ ┃ ┃ ┣ dev.png
+ ┃ ┃ ┣ expo.png
+ ┃ ┃ ┣ expo.svg
+ ┃ ┃ ┣ laravel.png
+ ┃ ┃ ┣ laravel.svg
+ ┃ ┃ ┣ nextjs.svg
+ ┃ ┃ ┣ service.png
+ ┃ ┃ ┣ software.png
+ ┃ ┃ ┣ sql.png
+ ┃ ┃ ┗ tutorial.png
+ ┃ ┣ profile/
+ ┃ ┃ ┗ eu.png
+ ┃ ┣ ads.txt               → Arquivo de teste e redundância para rastreamento do AdSense
+ ┃ ┣ file.svg
+ ┃ ┣ globe.svg
+ ┃ ┣ next.svg
+ ┃ ┣ vercel.svg
+ ┃ ┗ window.svg
+ ┣ src/
+ ┃ ┣ app/
+ ┃ ┃ ┣ api/               → Rotas de API (dados, sheets, testes)
+ ┃ ┃ ┣ aulas/             → Páginas de aulas por tema (Expo, Laravel, Next)
+ ┃ ┃ ┣ components/        → Componentes reutilizáveis e layouts
+ ┃ ┃ ┃ ┣ adsense/         → Componentes de integração do Google AdSense
+ ┃ ┃ ┃ ┣ layout/          → Navbar, Footer e estrutura base
+ ┃ ┃ ┃ ┣ scripts/adsense/ → Scripts de consentimento e carregamento dinâmico
+ ┃ ┃ ┃ ┣ softwares/       → Grades e recursos
+ ┃ ┃ ┃ ┗ ui/              → Blocos de interface (links, tech icons, etc.)
+ ┃ ┃ ┣ politica-de-privacidade/
+ ┃ ┃ ┣ sheets/
+ ┃ ┃ ┣ sobre/
+ ┃ ┃ ┣ tutoriais/         → Tutoriais de Git, Laravel, Next e Supabase
+ ┃ ┃ ┣ utils/             → Funções utilitárias e listas de dados/links
+ ┃ ┃ ┣ favicon.ico
+ ┃ ┃ ┣ global.ts
+ ┃ ┃ ┣ globals.css
+ ┃ ┃ ┣ layout.tsx         → Layout base da aplicação
+ ┃ ┃ ┗ page.tsx           → Página inicial
+ ┃ ┗ lib/
+ ┃   ┗ mongodb.ts         → Conexão com o banco de dados MongoDB
+ ┣ package.json
+ ┗ tsconfig.json
 ```
 
 ---
