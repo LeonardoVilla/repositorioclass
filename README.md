@@ -1,92 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 Leonardo Villa — Plataforma de Conteúdos Educacionais
 
-## Getting Started
+Este é o código-fonte do site [**leonardovilla.com.br**](https://leonardovilla.com.br), desenvolvido em **Next.js** com **TypeScript** e **Tailwind CSS**.  
+O objetivo é centralizar e publicar conteúdos didáticos para meus alunos, com integração do **Google AdSense** para exibição de anúncios educacionais.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🧱 Tecnologias Principais
+
+- ⚛️ [Next.js 16](https://nextjs.org/) — framework React com renderização híbrida e otimização automática  
+- 💨 [Tailwind CSS 4](https://tailwindcss.com/) — estilização rápida e responsiva  
+- 💡 [TypeScript 5](https://www.typescriptlang.org/) — tipagem estática e segurança no desenvolvimento  
+- 🧩 [Framer Motion](https://www.framer.com/motion/) — animações fluidas e acessíveis  
+- 🧠 [MongoDB](https://www.mongodb.com/) — persistência de dados (configurada em `src/lib/mongodb.ts`)  
+- 💰 [Google AdSense](https://ads.google.com/) — monetização via banners e scripts otimizados  
+
+---
+
+## 📂 Estrutura de Diretórios
+
+```plaintext
+src
+ ┣ app
+ ┃ ┣ api/               → Rotas de API (dados, sheets, testes)
+ ┃ ┣ aulas/             → Páginas de aulas por tema (Expo, Laravel, Next)
+ ┃ ┣ components/        → Componentes reutilizáveis e layouts
+ ┃ ┃ ┣ adsense/         → Componentes de integração do Google AdSense
+ ┃ ┃ ┣ layout/          → Navbar, Footer e estrutura base
+ ┃ ┃ ┣ scripts/adsense/ → Scripts de consentimento e carregamento dinâmico
+ ┃ ┃ ┣ softwares/       → Grades e recursos
+ ┃ ┃ ┗ ui/              → Blocos de interface (links, tech icons, etc.)
+ ┃ ┣ politica-de-privacidade/
+ ┃ ┣ sheets/
+ ┃ ┣ sobre/
+ ┃ ┣ tutoriais/         → Tutoriais de Git, Laravel, Next e Supabase
+ ┃ ┣ utils/             → Funções utilitárias e listas de dados/links
+ ┃ ┣ layout.tsx         → Layout base da aplicação
+ ┃ ┗ page.tsx           → Página inicial
+ ┗ lib/
+   ┗ mongodb.ts         → Conexão com o banco de dados MongoDB
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Scripts disponíveis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando              | Descrição |
+|----------------------|-----------|
+| `npm run dev`        | Inicia o servidor de desenvolvimento local |
+| `npm run build`      | Gera a versão otimizada de produção |
+| `npm start`          | Inicia o servidor com o build de produção |
+| `npm run lint`       | Executa o linter para análise de código |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+O projeto está hospedado na [**Vercel**](https://vercel.com/), com integração contínua a partir do repositório GitHub.  
+Cada *push* na branch principal gera automaticamente uma nova versão do site em produção.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 💸 Integração com Google AdSense
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Os componentes responsáveis pelo carregamento e consentimento de anúncios estão localizados em:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/components/scripts/adsense/
+ ┣ GoogleAdSenseScript.tsx
+ ┗ GoogleConsent.tsx
+```
 
-## 📁 Estrutura de Pastas
+E as metas de integração (head tags) ficam em:
+
+```
+src/components/adsense/GoogleAdSenseMeta.tsx
+```
+
+Esses componentes são carregados de forma controlada para respeitar as políticas de privacidade e consentimento do usuário.
+
+---
+
+## 🧩 Outras dependências
+
+| Pacote | Função |
+|--------|--------|
+| **axios** | Requisições HTTP para APIs internas e externas |
+| **lucide-react**, **react-icons**, **react-feather** | Ícones vetoriais modernos |
+| **googleapis**, **google-auth-library** | Integração com APIs do Google (ex: Google Sheets) |
+
+---
+
+## ⚙️ Configuração de ambiente
+
+Crie um arquivo `.env.local` na raiz do projeto com as variáveis de ambiente necessárias:
 
 ```bash
-src/
- ├── app/
- │    ├── layout.tsx
- │    ├── page.tsx
- │    ├── about/
- │    │    └── page.tsx
- │    └── ...
- │
- ├── components/
- │    ├── ui/
- │    │    ├── button.tsx
- │    │    ├── input.tsx
- │    │    └── ...
- │    ├── layout/
- │    │    ├── navbar.tsx
- │    │    ├── footer.tsx
- │    │    └── ...
- │    ├── carousel/
- │    │    ├── carousel.tsx
- │    │    ├── carousel-item.tsx
- │    │    └── ...
- │    └── ...
- │
- ├── lib/
- │    ├── utils.ts
- │    ├── constants.ts
- │    └── ...
- │
- ├── styles/
- │    ├── globals.css
- │    └── components.css
- │
- ├── hooks/
- │    ├── useMediaQuery.ts
- │    └── ...
- │
- └── types/
-      └── index.d.ts
+MONGODB_URI=mongodb+srv://<user>:<password>@<cluster>/<db>
+GOOGLE_ADSENSE_CLIENT=ca-pub-xxxxxxxxxxxxxx
+NEXT_PUBLIC_SITE_URL=https://leonardovilla.com.br
+```
 
-
+> ⚠️ Nunca compartilhe essas variáveis em repositórios públicos.
 
 ---
 
-🧠 **Explicação:**
-- O primeiro bloco usa `## 📁 Estrutura de Pastas` como título da seção.
-- O segundo bloco usa **três crases (```)** com a linguagem `bash` para destacar a estrutura de diretórios com um estilo de terminal.
-- Você pode substituir o emoji ou o título conforme o estilo do seu README.
+## 🧠 Futuras melhorias
+
+- 🔒 Autenticação para área de alunos  
+- 📊 Dashboard de visualizações de conteúdo  
+- 🗂️ CMS simplificado (inserção de aulas via painel)  
+- 🌙 Tema escuro automático  
 
 ---
 
-Se quiser, posso te montar um trecho completo de README (com título, descrição, badges, e essa estrutura dentro), seguindo boas práticas para projetos Next.js 2025 — quer que eu gere esse modelo completo pra você?
+## 📄 Licença
 
+Este projeto é distribuído sob a licença **MIT**.  
+Sinta-se livre para usar como referência educacional ou base para projetos didáticos.
+
+---
+
+Feito por **[Leonardo Villa](https://leonardovilla.com.br)**.
