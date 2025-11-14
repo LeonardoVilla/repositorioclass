@@ -32,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        <meta name="google-site-verification" content="WvqaVV5KFE0IuvaBn06y5-8I_o2jFo6tR1iXsP6vC3E" />
         {/* Meta tag do google ads */}
         <GoogleAdSenseMeta />
         {/* script do hed - google ads */}
